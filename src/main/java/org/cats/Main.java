@@ -1,12 +1,14 @@
 package org.cats;
 
 import org.cats.model.Cats;
+import org.cats.service.CatService;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         int menuOption = -1;
         String[] buttoms = {"1. See cats.", "2. See Fav.", "3. Go out."};
@@ -22,11 +24,11 @@ public class Main {
 
             switch (menuOption){
                 case 0:
-                    //CatService.seeRandomCats();
+                    CatService.seeRandomCats();
                     break;
                 case 1:
                     Cats cat = new Cats();
-                    //CatService.seeFavoriteCats(cat.getApikey());
+                    CatService.seeFavoriteCats(cat.getApikey());
                 default:
                     break;
             }
