@@ -28,7 +28,7 @@ public class Main {
                     break;
                 case 1:
                     Cats cat = new Cats();
-                    //CatService.seeFavoriteCats(cat.getApikey());
+                    CatService.seeFavoriteCats(cat.getApikey());
                 default:
                     break;
             }

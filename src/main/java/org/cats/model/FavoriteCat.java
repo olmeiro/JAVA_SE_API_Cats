@@ -2,13 +2,16 @@ package org.cats.model;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
-public class Cats {
+import java.awt.*;
+
+public class FavoriteCat {
+
     Dotenv dotenv = Dotenv.load();
 
     String id;
-    String url;
+    String imageId;
     String apikey = dotenv.get("API_KEY");
-    String image;
+    public ImageX image;
 
     public String getId() {
         return id;
@@ -18,14 +21,13 @@ public class Cats {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
+    public String getImageId() {
+        return imageId;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
     }
-
 
     public String getApikey() {
         return apikey;
@@ -35,11 +37,11 @@ public class Cats {
         this.apikey = apikey;
     }
 
-    public String getImage() {
+    public ImageX getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(ImageX image) {
         this.image = image;
     }
 }
